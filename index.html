@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development I - Daniel Cosme</title>
+    <meta name="description" content="WDD 231 course home page for Daniel Cosme, featuring course projects, JavaScript array filtering, and web development fundamentals.">
+    <meta name="author" content="Daniel Cosme">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.svg" alt="Daniel Cosme Logo" width="50" height="50" class="site-logo">
+            <span>Daniel Cosme</span>
+        </div>
+        <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        <nav id="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="chamber/index.html">Chamber</a>
+            <a href="final/index.html">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="card about-card">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I am a passionate web developer and video editor from San Francisco, Zulia, Venezuela. I am currently expanding my skills in Frontend Web Development, mastering HTML, CSS, and JavaScript to build dynamic and responsive applications.</p>
+            </div>
+        </section>
+
+        <section class="card location-card">
+            <h2>San Francisco, Zulia</h2>
+            <p>Zulia is a vibrant state known for its rich culture and iconic landmarks like the General Rafael Urdaneta Bridge. It's a place full of energy and heat, perfect for fueling late-night coding sessions!</p>
+        </section>
+
+        <section class="card certificate-card">
+            <h2>Web and Computer Programming Certificate</h2>
+            
+            <div class="filter-buttons">
+                <button id="btn-all">All Courses</button>
+                <button id="btn-wdd">WDD Courses</button>
+                <button id="btn-cse">CSE Courses</button>
+            </div>
+
+            <div id="course-container" class="course-grid"></div>
+
+            <div class="credits-section">
+                <p>Total Credits: <span id="total-credits">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/SenixArt" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Daniel Cosme | Zulia, Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
