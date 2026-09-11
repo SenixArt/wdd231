@@ -4,7 +4,7 @@
         "address": "123 Main St, City, ST 12345",
         "phone": "(555) 123-4567",
         "website": "https://www.techsolutions.com",
-        "image": "tech.png",
+        "image": "tech.svg",
         "membershipLevel": 3
     },
     {
@@ -12,7 +12,7 @@
         "address": "456 Oak Ave, City, ST 12345",
         "phone": "(555) 987-6543",
         "website": "https://www.localbakery.com",
-        "image": "bakery.png",
+        "image": "bakery.svg",
         "membershipLevel": 1
     },
     {
@@ -20,7 +20,7 @@
         "address": "789 Pine Rd, City, ST 12345",
         "phone": "(555) 456-7890",
         "website": "https://www.greenlandscaping.com",
-        "image": "landscaping.png",
+        "image": "landscaping.svg",
         "membershipLevel": 2
     },
     {
@@ -28,7 +28,7 @@
         "address": "321 Elm St, City, ST 12345",
         "phone": "(555) 222-3333",
         "website": "https://www.cityauto.com",
-        "image": "auto.png",
+        "image": "auto.svg",
         "membershipLevel": 1
     },
     {
@@ -36,7 +36,7 @@
         "address": "654 Maple Dr, City, ST 12345",
         "phone": "(555) 444-5555",
         "website": "https://www.sunsetdental.com",
-        "image": "dental.png",
+        "image": "dental.svg",
         "membershipLevel": 3
     },
     {
@@ -44,7 +44,7 @@
         "address": "987 Cedar Ln, City, ST 12345",
         "phone": "(555) 666-7777",
         "website": "https://www.bookhaven.com",
-        "image": "books.png",
+        "image": "books.svg",
         "membershipLevel": 2
     },
     {
@@ -52,7 +52,7 @@
         "address": "111 Gym Blvd, City, ST 12345",
         "phone": "(555) 888-9999",
         "website": "https://www.fitnessplus.com",
-        "image": "fitness.png",
+        "image": "fitness.svg",
         "membershipLevel": 3
     }
 ]
