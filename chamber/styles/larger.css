@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    /* Muestra 3 columnas en pantallas grandes */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Ordena la lista en una sola fila en pantallas grandes */
+    .list section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .list section h3, 
+    .list section p, 
+    .list section a {
+        margin: 0;
+        flex: 1;
+        text-align: left;
+        padding-left: 1rem;
+    }
+}
