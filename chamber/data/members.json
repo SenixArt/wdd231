@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Solutions Inc.",
+        "address": "123 Main St, City, ST 12345",
+        "phone": "(555) 123-4567",
+        "website": "https://www.techsolutions.com",
+        "image": "tech.png",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Local Bakery",
+        "address": "456 Oak Ave, City, ST 12345",
+        "phone": "(555) 987-6543",
+        "website": "https://www.localbakery.com",
+        "image": "bakery.png",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Green Landscaping",
+        "address": "789 Pine Rd, City, ST 12345",
+        "phone": "(555) 456-7890",
+        "website": "https://www.greenlandscaping.com",
+        "image": "landscaping.png",
+        "membershipLevel": 2
+    },
+    {
+        "name": "City Auto Repair",
+        "address": "321 Elm St, City, ST 12345",
+        "phone": "(555) 222-3333",
+        "website": "https://www.cityauto.com",
+        "image": "auto.png",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Sunset Dental",
+        "address": "654 Maple Dr, City, ST 12345",
+        "phone": "(555) 444-5555",
+        "website": "https://www.sunsetdental.com",
+        "image": "dental.png",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Book Haven",
+        "address": "987 Cedar Ln, City, ST 12345",
+        "phone": "(555) 666-7777",
+        "website": "https://www.bookhaven.com",
+        "image": "books.png",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Fitness Plus",
+        "address": "111 Gym Blvd, City, ST 12345",
+        "phone": "(555) 888-9999",
+        "website": "https://www.fitnessplus.com",
+        "image": "fitness.png",
+        "membershipLevel": 3
+    }
+]
