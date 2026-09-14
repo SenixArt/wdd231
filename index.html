@@ -3,67 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Web Frontend Development I - Daniel Cosme</title>
-    <meta name="description" content="WDD 231 course home page for Daniel Cosme, featuring course projects, JavaScript array filtering, and web development fundamentals.">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Chamber of Commerce Home Page featuring current weather, events, and member spotlights.">
     <meta name="author" content="Daniel Cosme">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/home.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="images/logo.svg" alt="Daniel Cosme Logo" width="50" height="50" class="site-logo">
-            <span>Daniel Cosme</span>
-        </div>
-        <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
-        <nav id="nav-menu">
-            <a href="#" class="active">Home</a>
-            <a href="chamber/index.html">Chamber</a>
-            <a href="final/index.html">Final</a>
-        </nav>
+        <img src="images/logo.webp" alt="Chamber Logo" width="80" height="80">
+        <h1>Chamber of Commerce</h1>
     </header>
 
-    <main>
-        <h1>Home</h1>
-        
-        <section class="card about-card">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>Hello! I am a passionate web developer and video editor from San Francisco, Zulia, Venezuela. I am currently expanding my skills in Frontend Web Development, mastering HTML, CSS, and JavaScript to build dynamic and responsive applications.</p>
-            </div>
+    <nav>
+        <button id="menu-button" aria-label="Toggle Navigation">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main class="home-main">
+        <!-- Hero Section con Call to Action (Requisito 7 y 8) -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Chamber Hero Banner" width="800" height="400" class="hero-img">
+            </picture>
+            <a href="join.html" class="cta-button">Join the Chamber!</a>
         </section>
 
-        <section class="card location-card">
-            <h2>San Francisco, Zulia</h2>
-            <p>Zulia is a vibrant state known for its rich culture and iconic landmarks like the General Rafael Urdaneta Bridge. It's a place full of energy and heat, perfect for fueling late-night coding sessions!</p>
-        </section>
+        <div class="home-grid">
+            <!-- Current Events (Requisito 9) -->
+            <section class="card events">
+                <h2>Current Events</h2>
+                <div class="event-item">
+                    <h3>Tech Networking Mixer</h3>
+                    <p><strong>Date:</strong> Oct 12 | 6:00 PM</p>
+                    <p>Connect with local businesses and entrepreneurs.</p>
+                </div>
+                <div class="event-item">
+                    <h3>Annual Trade Expo</h3>
+                    <p><strong>Date:</strong> Nov 05 | 9:00 AM</p>
+                    <p>Showcase your business to thousands of visitors.</p>
+                </div>
+            </section>
 
-        <section class="card certificate-card">
-            <h2>Web and Computer Programming Certificate</h2>
-            
-            <div class="filter-buttons">
-                <button id="btn-all">All Courses</button>
-                <button id="btn-wdd">WDD Courses</button>
-                <button id="btn-cse">CSE Courses</button>
-            </div>
+            <!-- Weather Section (Requisito 10) -->
+            <section class="card weather">
+                <h2>Weather</h2>
+                <div id="current-weather">
+                    <p>Loading weather...</p>
+                </div>
+                <hr>
+                <h3>3-Day Forecast</h3>
+                <div id="weather-forecast"></div>
+            </section>
 
-            <div id="course-container" class="course-grid"></div>
-
-            <div class="credits-section">
-                <p>Total Credits: <span id="total-credits">0</span></p>
-            </div>
-        </section>
+            <!-- Member Spotlights (Requisito 11) -->
+            <section class="card spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlight-container" class="spotlight-grid">
+                    <!-- Se llena dinámicamente desde el JS -->
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://github.com/SenixArt" target="_blank" title="GitHub">GitHub</a>
-            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">LinkedIn</a>
-        </div>
-        <p>&copy; <span id="currentyear"></span> | Daniel Cosme | Zulia, Venezuela</p>
+        <p>&copy; <span id="currentyear"></span> | Daniel Cosme | WDD 231</p>
         <p id="lastModified"></p>
     </footer>
 </body>
