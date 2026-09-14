@@ -1,4 +1,94 @@
-/* --- Hero & Call to Action Overlay --- */
+/* --- ESTILOS GLOBALES Y NAVEGACIÓN --- */
+:root {
+    --primary-color: #0038a8;
+    --secondary-color: #ce1126;
+    --accent-color: #fce300;
+    --bg-color: #f4f4f9;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 10px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px 6px 0 0;
+}
+
+header img {
+    border-radius: 50%;
+    background-color: white;
+    padding: 2px;
+}
+
+nav {
+    background-color: #002266;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: var(--secondary-color);
+}
+
+#menu-button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+main {
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0 0 6px 6px;
+}
+
+/* --- HERO & CALL TO ACTION OVERLAY --- */
 .hero {
     position: relative;
     text-align: center;
@@ -10,6 +100,8 @@
     height: auto;
     display: block;
     border-radius: 6px;
+    object-fit: cover;
+    max-height: 400px;
 }
 
 .cta-button {
@@ -17,7 +109,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #0038a8;
+    background-color: var(--primary-color);
     color: #ffffff;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -26,13 +118,14 @@
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border: 2px solid #ffffff;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #ce1126;
+    background-color: var(--secondary-color);
 }
 
-/* --- Layout Grid --- */
+/* --- LAYOUT GRID Y TARJETAS --- */
 .home-grid {
     display: flex;
     flex-direction: column;
@@ -40,7 +133,7 @@
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border: 1px solid #e0e0e0;
     border-radius: 6px;
     padding: 1.2rem;
@@ -48,28 +141,29 @@
 }
 
 .card h2 {
-    color: #0038a8;
-    border-bottom: 2px solid #fce300;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.4rem;
-    margin-top: 0;
+    margin-bottom: 0.8rem;
 }
 
 .event-item {
     margin-bottom: 1rem;
 }
 
-/* --- Weather Styling --- */
+/* --- WEATHER STYLING --- */
 #current-weather {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 #weather-forecast p {
     margin: 0.3rem 0;
 }
 
-/* --- Spotlights Layout --- */
+/* --- SPOTLIGHTS LAYOUT --- */
 .spotlight-grid {
     display: flex;
     flex-direction: column;
@@ -90,8 +184,25 @@
     margin: 0.5rem 0;
 }
 
-/* --- Desktop Layout (768px +) --- */
+/* --- DESKTOP LAYOUT (768px +) --- */
 @media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-links li {
+        flex: 1;
+    }
+
+    .nav-links li a {
+        border-bottom: none;
+    }
+
     .home-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
