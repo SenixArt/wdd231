@@ -1,4 +1,4 @@
-/* --- ESTILOS GLOBALES Y NAVEGACIÓN --- */
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
 :root {
     --primary-color: #0038a8;
     --secondary-color: #ce1126;
@@ -22,6 +22,7 @@ body {
     padding: 10px;
 }
 
+/* --- HEADER Y NAV --- */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -88,7 +89,7 @@ footer {
     border-radius: 0 0 6px 6px;
 }
 
-/* --- HERO & CALL TO ACTION OVERLAY --- */
+/* --- HERO & CALL TO ACTION --- */
 .hero {
     position: relative;
     text-align: center;
@@ -151,7 +152,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* --- WEATHER STYLING --- */
+/* --- CLIMA --- */
 #current-weather {
     display: flex;
     align-items: center;
@@ -163,7 +164,7 @@ footer {
     margin: 0.3rem 0;
 }
 
-/* --- SPOTLIGHTS LAYOUT --- */
+/* --- SPOTLIGHTS --- */
 .spotlight-grid {
     display: flex;
     flex-direction: column;
@@ -184,7 +185,7 @@ footer {
     margin: 0.5rem 0;
 }
 
-/* --- DESKTOP LAYOUT (768px +) --- */
+/* --- VISTA DESKTOP (768px+) --- */
 @media (min-width: 768px) {
     #menu-button {
         display: none;
