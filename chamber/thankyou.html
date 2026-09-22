@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Application Submitted</title>
+  <meta name="description" content="Confirmation page for chamber membership submission.">
+  <meta name="author" content="Daniel Cosme">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+  </header>
+
+  <main class="thankyou-container">
+    <h2>Thank You for Joining!</h2>
+    <p>We have received your membership application. Below are the details you submitted:</p>
+
+    <div id="results" class="results-card">
+      <!-- Los datos requeridos se cargan dinámicamente desde el JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Daniel Cosme | Venezuela</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
