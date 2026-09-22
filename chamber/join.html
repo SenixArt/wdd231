@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce - Join Us</title>
+  <meta name="description" content="Membership application form for the Chamber of Commerce.">
+  <meta name="author" content="Daniel Cosme">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-container">
+    <h2>Membership Application</h2>
+    
+    <!-- Formulario con método GET que envía a thankyou.html -->
+    <form method="get" action="thankyou.html" class="join-form">
+      
+      <label>
+        First Name
+        <input type="text" name="fname" id="fname" required title="Enter your first name" autocomplete="given-name">
+      </label>
+
+      <label>
+        Last Name
+        <input type="text" name="lname" id="lname" required title="Enter your last name" autocomplete="family-name">
+      </label>
+
+      <label>
+        Organizational Title
+        <input type="text" name="title" id="title" title="Enter your title (minimum 7 characters: letters, spaces, and hyphens only)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" name="email" id="email" required title="Enter a valid email address" autocomplete="email" placeholder="example@domain.com">
+      </label>
+
+      <label>
+        Mobile Phone
+        <input type="tel" name="phone" id="phone" required title="Enter your mobile phone number" autocomplete="tel">
+      </label>
+
+      <label>
+        Business / Organization Name
+        <input type="text" name="organization" id="organization" required title="Enter your business or organization name" autocomplete="organization">
+      </label>
+
+      <label>
+        Membership Level
+        <select name="membership" id="membership" required title="Select a membership level">
+          <option value="" disabled selected>Select Level...</option>
+          <option value="np">NP Membership (Non-Profit - Free)</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business Description
+        <textarea name="description" id="description" title="Provide a brief description of your business"></textarea>
+      </label>
+
+      <!-- Timestamp Oculto -->
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <input type="submit" value="Complete Registration" class="submit-btn">
+    </form>
+
+    <!-- Tarjetas de Niveles de Membresía -->
+    <section class="membership-cards">
+      <div class="card np-card">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations with no fee.</p>
+        <button type="button" class="open-modal" data-modal="modal-np">View Benefits</button>
+      </div>
+
+      <div class="card bronze-card">
+        <h3>Bronze Membership</h3>
+        <p>Entry-level membership for small businesses.</p>
+        <button type="button" class="open-modal" data-modal="modal-bronze">View Benefits</button>
+      </div>
+
+      <div class="card silver-card">
+        <h3>Silver Membership</h3>
+        <p>Increased visibility and event discounts.</p>
+        <button type="button" class="open-modal" data-modal="modal-silver">View Benefits</button>
+      </div>
+
+      <div class="card gold-card">
+        <h3>Gold Membership</h3>
+        <p>Maximum exposure, spotlight positioning, and full benefits.</p>
+        <button type="button" class="open-modal" data-modal="modal-gold">View Benefits</button>
+      </div>
+    </section>
+
+    <!-- Diálogos Modales HTML (<dialog>) -->
+    <dialog id="modal-np">
+      <div class="modal-content">
+        <h3>NP Membership Benefits</h3>
+        <p>Includes community directory listing, access to networking events, and non-profit training support.</p>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bronze">
+      <div class="modal-content">
+        <h3>Bronze Membership Benefits</h3>
+        <p>Includes business directory listing, 10% discount on event tickets, and quarterly newsletter features.</p>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-silver">
+      <div class="modal-content">
+        <h3>Silver Membership Benefits</h3>
+        <p>Includes enhanced directory placement, 20% event discounts, advertising banner credits, and workshop passes.</p>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-gold">
+      <div class="modal-content">
+        <h3>Gold Membership Benefits</h3>
+        <p>Includes home page spotlight feature, VIP event access, full advertising package, and free exhibition booths.</p>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Daniel Cosme | Venezuela</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
