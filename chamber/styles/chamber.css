@@ -185,6 +185,157 @@ footer {
     margin: 0.5rem 0;
 }
 
+/* ==========================================================
+   --- W04: JOIN FORM, MEMBERSHIP CARDS & THANK YOU PAGE ---
+   ========================================================== */
+
+.join-layout, .thankyou-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Formulario */
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--primary-color);
+    gap: 0.4rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Indicadores de validación requeridos */
+.join-form input:required {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.join-form input:required:valid {
+    border-left: 4px solid #28a745;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Tarjetas de Membresía con Animación Keyframe */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.membership-cards .card {
+    border-left: 5px solid var(--primary-color);
+    text-align: center;
+    /* Animación de carga exigida en la rúbrica */
+    animation: fadeInCard 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-cards button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.membership-cards button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Ventanas Modales (<dialog>) */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.close-modal {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Página Thank You */
+.results-card {
+    background: var(--card-bg);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    line-height: 1.8;
+}
+
+
 /* --- VISTA DESKTOP (768px+) --- */
 @media (min-width: 768px) {
     #menu-button {
@@ -212,5 +363,12 @@ footer {
     .spotlight-grid {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    /* Layout de Join en Pantalla Grande (Formulario a la izq, Tarjetas a la der) */
+    .join-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
     }
 }
