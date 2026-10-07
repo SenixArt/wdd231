@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our catalog of 15 creative development and design courses.">
+    <meta name="author" content="Daniel Cosme">
+    <title>Mundo Creativo | Courses Catalog</title>
+    
+    <meta property="og:title" content="Mundo Creativo Catalog">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.webp">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/final.css">
+    <script type="module" src="scripts/courses.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Mundo Creativo</div>
+        <button id="menu-btn" aria-label="Open Navigation Menu">☰</button>
+        <nav id="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="join.html">Join Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Course Catalog</h1>
+        <div class="filters">
+            <button class="filter-btn active" data-cat="all">All</button>
+            <button class="filter-btn" data-cat="design">Design</button>
+            <button class="filter-btn" data-cat="video">Video</button>
+            <button class="filter-btn" data-cat="dev">Development</button>
+        </div>
+
+        <div id="courses-grid" class="cards-grid"></div>
+    </main>
+
+    <dialog id="course-dialog">
+        <div class="dialog-content">
+            <button id="close-modal" aria-label="Close Modal">&times;</button>
+            <h2 id="modal-title"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-level"></p>
+            <p id="modal-duration"></p>
+            <p id="modal-rating"></p>
+            <p id="modal-description"></p>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 | Daniel Cosme | WDD 231 Final Project</p>
+        <p>
+            <a href="attributions.html">Attributions</a> | 
+            <a href="https://youtu.be/your-video-id" target="_blank" rel="noopener">Project Video Demo</a>
+        </p>
+    </footer>
+</body>
+</html>
